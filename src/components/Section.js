@@ -22,6 +22,7 @@ function Section({ title, description, leftBtnText, rightBtnText, backgroundImg 
                             <RightButton>
                                 {rightBtnText}
                             </RightButton>
+                            
                         }
                         
                     </ButtonGroup>
@@ -45,13 +46,22 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: ${ props => `url("/images/${props.bgImage}")` }
+    background-image: ${ props => `url("/images/${props.bgImage}")` };
+    
+    
     
 `
 const ItemText = styled.div`
     
-    padding-top: 15vh;
+    padding-top: 17vh;
     text-align: center;
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 500;
+    }
+    p {
+        font-weight: 300;
+    }
 
 `
 
@@ -63,7 +73,7 @@ const ButtonGroup = styled.div`
     }
 `
 const LeftButton = styled.div`
-    background-color: rgba(23, 26, 32, 0.8);
+    background-color: rgba(23, 26, 32, 0.95);
     height: 40px;
     width: 256px;
     color: white;
@@ -76,6 +86,7 @@ const LeftButton = styled.div`
     font-size: 12px;
     cursor: pointer;
     margin: 8px;
+    
 `
 const RightButton = styled(LeftButton)`
     background-color: white;
@@ -83,10 +94,14 @@ const RightButton = styled(LeftButton)`
     color: black;
 `
 const DownArrow = styled.img`
+    width: 200px;
     height: 40px;
     overflow-x: hidden;
-    animation: animateDown infinite 1.5s;
+    animation: animateDown infinite 2s;
 `
 const Buttons = styled.div`
+
+`
+const Footer = styled.div`
 
 `
