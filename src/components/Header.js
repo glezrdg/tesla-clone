@@ -30,14 +30,17 @@ function Header() {
                 <CloseWrapper>
                     <CustomClose onClick={()=> setBurgerStatus(false)} /> 
                 </CloseWrapper>
-                {cars && cars.map((car, index) => (
-                   <li><a key={index} href="#">{car}</a></li>
-                ))}
-                <li><a href="#">Existing Inventory</a></li>
-                <li><a href="#">Used Inventory</a></li>
-                <li><a href="#">Trade-in</a></li>
-                <li><a href="#">Cybertruck</a></li>
-                <li><a href="#">Roadster</a></li>
+                <ol>
+                    {cars && cars.map((car, index) => (
+                    <li><a key={index} href="#">{car}</a></li>
+                    ))}
+                    <li><a href="#">Existing Inventory</a></li>
+                    <li><a href="#">Used Inventory</a></li>
+                    <li><a href="#">Trade-in</a></li>
+                    <li><a href="#">Cybertruck</a></li>
+                    <li><a href="#">Roadster</a></li>
+                </ol>
+                
                 
 
             </BurgerNav>
@@ -78,10 +81,11 @@ const Menu = styled.div`
         font-weight: 500;
         padding: 10px 17.5px;
         flex-wrap: nowrap;
+        border-radius: 20px;
     }
     a:hover{
         background: rgba(0,0,0,0.08727240896358546);
-        border-radius: 20px;
+        transition: 0.8s;
     }
     @media (max-width: 768px) {
         display: none;
@@ -95,10 +99,11 @@ const RightMenu = styled.div`
         font-size: 0.95rem;
         font-weight: 500;
         padding: 10px 15px;
+        border-radius: 20px;
     }
     a:hover{
-        background: rgba(0,0,0,0.08727240896358546);
-        border-radius: 20px;
+        background: rgba(0,0,0,0.08727240896358546);     
+        transition: 0.8s;
     }
 `
 
@@ -109,7 +114,7 @@ const BurgerNav = styled.div`
     right: 0;
     opacity: 0.95;
     background: white;
-    width: 300px;
+    width: 294px;
     z-index: 16;
     list-style: none;
     padding: 20px;
@@ -119,22 +124,38 @@ const BurgerNav = styled.div`
     transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s;
     
-    
+    ol {
+        list-style: none;
+        padding 4px 12px;
+    }
 
     li {
-        padding: 15px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, .2);
-        
+        padding: 7px 10px 7px 15px;
+        margin: 0 0 8px;
+        border-radius: 20px;
         a {
-            font-weight: 600;
-
+            font-weight: 500;
+            font-size: 0.95rem;
+            opacity: 0.85;
         }
+    }
+    li:hover{
+        background: rgba(0,0,0,0.06727240896358546);
+        
+        transition: 0.8s;
     }
 `
 const CustomClose = styled(CloseIcon)`
     cursor: pointer;
+    border-radius: 50px;
+    :hover {
+        transition: 0.8s;
+        background: rgba(0,0,0,0.06727240896358546);
+    }
 `
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
+    margin: 10px 5px 24px 0 ;
+    
 `

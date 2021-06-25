@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
+
 
 function Section({ title, description, leftBtnText, rightBtnText, backgroundImg }) {
     
@@ -19,16 +22,17 @@ function Section({ title, description, leftBtnText, rightBtnText, backgroundImg 
                             {leftBtnText}
                         </LeftButton>
                         { rightBtnText && 
+
                             <RightButton>
                                 {rightBtnText}
                             </RightButton>
-                            
-                        }
-                        
-                    </ButtonGroup>
-                    <DownArrow src="/images/down-arrow.svg" />
+
+                        }                   
+                    </ButtonGroup>  
+                    <KeyboardArrowDownIcon fontSize="large" />
                 </Fade>
             </Buttons>
+            
         </Wrap>
     )
 }
@@ -73,7 +77,7 @@ const ButtonGroup = styled.div`
     }
 `
 const LeftButton = styled.div`
-    background-color: rgba(23, 26, 32, 0.95);
+    background-color: rgba(23, 26, 32, 0.99);
     height: 40px;
     width: 256px;
     color: white;
@@ -93,15 +97,7 @@ const RightButton = styled(LeftButton)`
     opacity: 0.65;
     color: black;
 `
-const DownArrow = styled.img`
-    width: 200px;
-    height: 40px;
-    overflow-x: hidden;
-    animation: animateDown infinite 2s;
-`
-const Buttons = styled.div`
 
-`
-const Footer = styled.div`
+const Buttons = styled.div`
 
 `

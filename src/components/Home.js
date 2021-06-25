@@ -56,7 +56,18 @@ function Home() {
                 leftBtnText="Shop now"
                
             />
-
+            <Footer>
+                <ul>
+                    <li>Tesla © 2021</li>
+                    <li>Privacy & Legal</li>
+                    <li>Contact</li>
+                    <li>Careers</li>
+                    <li>Get Newsletter</li>
+                    <li>News</li>
+                    <li>Forums</li>
+                    <li>Locations</li>
+                </ul>
+            </Footer>
         </Container>
     )
 }
@@ -65,5 +76,24 @@ export default Home
 
 const Container = styled.div`
     height: 100vh;
+    
+`
+const Footer = styled.div`
+   ul{
+        
+        display: flex;
+        list-style: none;
+        padding: 0 2.5vw 5vh 2.5vw;
+        font-size: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+   }
+   li{
+       cursor: pointer;
+       margin: 0 10px
+       
+   }
+
     
 `

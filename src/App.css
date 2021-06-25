@@ -38,3 +38,7 @@
     transform: translateY(0px);
   }
 }
+.MuiSvgIcon-root {
+  font-size: 3rem;
+ 
+}

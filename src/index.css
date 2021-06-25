@@ -5,6 +5,7 @@
   font-family: 'Rubik', sans-serif;
   color: #393c41;
   font-weight: 500;
+   
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
@@ -29,4 +30,10 @@ a {
   60%{
     transform: translateY(3px);
   }
+}
+
+.MuiSvgIcon-fontSizeLarge{
+    font-size: 3rem;
+    overflow-x: hidden;
+    animation: animateDown infinite 2s;
 }
